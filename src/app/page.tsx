@@ -32,33 +32,9 @@ const promos = [
 export default function HomePage() {
   return (
     <>
-      <section className="relative h-[calc(100svh-76px)] overflow-hidden bg-black text-white">
+      <section className="relative h-[min(calc(100svh-76px),860px)] min-h-[600px] overflow-hidden bg-black text-white">
+        <h1 className="sr-only">Fitohorm Autóház – Dongfeng, Mitsubishi és Cenntro márkakereskedés Baján</h1>
         <HeroSlideshow />
-        <div
-          className="absolute inset-0"
-          style={{
-            background:
-              "linear-gradient(to bottom, rgba(0,0,0,.45) 0%, rgba(0,0,0,.2) 40%, rgba(0,0,0,.5) 100%)",
-          }}
-        />
-        <div className="relative flex h-full flex-col items-center">
-          <div className="mt-[16vh] px-6 text-center">
-            <h1 className="text-[48px] font-medium leading-none tracking-tight [text-shadow:0_2px_24px_rgba(0,0,0,.35)] sm:text-[72px] lg:text-[84px]">
-              Fitohorm Autóház
-            </h1>
-            <p className="mt-5 text-[20px] font-normal text-white/90 [text-shadow:0_2px_18px_rgba(0,0,0,.35)] sm:text-[28px] lg:text-[32px]">
-              Dongfeng · Mitsubishi · Cenntro
-            </p>
-          </div>
-          <div className="mb-20 mt-auto flex w-full flex-col items-center justify-center gap-4 px-6 sm:flex-row sm:gap-6">
-            <Link href="/keszlet" className="tds-btn tds-btn-primary">
-              Készletünk
-            </Link>
-            <Link href="/idopontfoglalas" className="tds-btn tds-btn-glass">
-              Szerviz időpont
-            </Link>
-          </div>
-        </div>
       </section>
 
       <section className="bg-white px-4 pt-4 sm:px-6 sm:pt-6">

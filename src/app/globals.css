@@ -125,7 +125,7 @@ body {
 
 .hero-slide {
   opacity: 0;
-  transition: opacity 1.6s ease;
+  transition: opacity 2s ease-in-out;
 }
 
 .hero-slide.is-active {
@@ -134,10 +134,12 @@ body {
 
 .hero-slide img {
   transform: scale(1.02);
+  will-change: transform;
 }
 
-.hero-slide.is-active img {
-  animation: ken-burns 8s ease-out forwards;
+.hero-slide.is-active img,
+.hero-slide.is-leaving img {
+  animation: ken-burns 14s linear forwards;
 }
 
 @keyframes ken-burns {
@@ -145,13 +147,43 @@ body {
     transform: scale(1.02);
   }
   to {
-    transform: scale(1.12);
+    transform: scale(1.1);
+  }
+}
+
+.hero-copy {
+  opacity: 0;
+  transform: translateY(16px);
+  pointer-events: none;
+  transition: opacity 0.5s ease, transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.hero-copy.is-active {
+  opacity: 1;
+  transform: none;
+  pointer-events: auto;
+  transition-delay: 0.25s;
+}
+
+.hero-progress {
+  width: 0;
+  animation: hero-progress 6s linear forwards;
+}
+
+@keyframes hero-progress {
+  to {
+    width: 100%;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .hero-slide.is-active img {
+  .hero-slide.is-active img,
+  .hero-slide.is-leaving img {
     animation: none;
+  }
+
+  .hero-copy {
+    transform: none;
   }
 }
 

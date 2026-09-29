@@ -176,15 +176,80 @@ export const staff = [
   { name: "Borbély Dominika", role: "Marketing", email: "borbely.dominika@fitohormautohaz.hu", image: "/img/staff/borbely-dominika.jpg" },
 ] as { name: string; role: string; email?: string; phone?: string; image: string }[];
 
-export const heroSlides = [
-  { src: "/img/hero/eclipse-cross-ev.jpg", alt: "Mitsubishi Eclipse Cross EV" },
-  { src: "/img/hero/dongfeng-mage.webp", alt: "Dongfeng Mage" },
-  { src: "/img/hero/outlander-phev.jpg", alt: "Mitsubishi Outlander PHEV" },
-  { src: "/img/hero/dongfeng-t5-evo.webp", alt: "Dongfeng T5 Evo" },
-  { src: "/img/hero/fitohorm-autohaz.png", alt: "Fitohorm Autóház" },
-  { src: "/img/hero/dongfeng-shine.jpg", alt: "Dongfeng Shine" },
-  { src: "/img/hero/mitsubishi-colt.webp", alt: "Mitsubishi Colt" },
-  { src: "/img/hero/mitsubishi-asx.jpg", alt: "Mitsubishi ASX" },
+export type HeroSlide = {
+  src: string;
+  eyebrow: string;
+  title: string;
+  text: string;
+  href: string;
+  cta: string;
+};
+
+export const heroSlides: HeroSlide[] = [
+  {
+    src: "/img/cars/mitsubishi-outlander.jpg",
+    eyebrow: "Mitsubishi",
+    title: "Outlander PHEV",
+    text: "Most 5.000.000 Ft kedvezménnyel, akciós ár: 18 790 000 Ft",
+    href: "/keszlet/mitsubishi-outlander",
+    cta: "Részletek",
+  },
+  {
+    src: "/img/hero/dongfeng-mage.webp",
+    eyebrow: "Dongfeng",
+    title: "Mage",
+    text: "1.5 turbó SUV készletről, akciós ár: 9 190 000 Ft",
+    href: "/keszlet/dongfeng-mage",
+    cta: "Részletek",
+  },
+  {
+    src: "/img/hero/eclipse-cross-ev.jpg",
+    eyebrow: "Mitsubishi",
+    title: "Mitsubishi kínálat",
+    text: "Colt, ASX, Grandis és Outlander egy helyen, Baján",
+    href: "/keszlet?marka=mitsubishi",
+    cta: "Mitsubishi modellek",
+  },
+  {
+    src: "/img/hero/dongfeng-t5-evo.webp",
+    eyebrow: "Dongfeng",
+    title: "T5 Evo",
+    text: "Luxory felszereltség, akciós ár: 11 990 000 Ft",
+    href: "/keszlet/dongfeng-t5-evo",
+    cta: "Részletek",
+  },
+  {
+    src: "/img/hero/fitohorm-autohaz.png",
+    eyebrow: "Fitohorm Autóház",
+    title: "Szalon és szerviz Baján",
+    text: "Új autók, márkaszerviz, biztosítás és finanszírozás egy helyen",
+    href: "/szalonunkrol",
+    cta: "Szalonunkról",
+  },
+  {
+    src: "/img/hero/dongfeng-shine.jpg",
+    eyebrow: "Dongfeng",
+    title: "Shine",
+    text: "Sport coupé több színben, akciós ár: 7 990 000 Ft",
+    href: "/keszlet/dongfeng-shine",
+    cta: "Részletek",
+  },
+  {
+    src: "/img/hero/mitsubishi-colt.webp",
+    eyebrow: "Mitsubishi",
+    title: "Colt",
+    text: "Instyle felszereltséggel, akciós ár: 7 990 000 Ft",
+    href: "/keszlet/mitsubishi-colt",
+    cta: "Részletek",
+  },
+  {
+    src: "/img/hero/mitsubishi-asx.jpg",
+    eyebrow: "Mitsubishi",
+    title: "ASX",
+    text: "Benzines és hibrid változatban, már 7 899 000 Ft-tól",
+    href: "/keszlet/mitsubishi-asx-invite",
+    cta: "Részletek",
+  },
 ];
 
 export const cookieCopy = {
